@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <script src="jquery.js"></script>
+</head>
+<style>
+    .button_booth {
+        border: 0px;
+        width: 100px;
+        height: 50px;
+        background: dodgerblue;
+        color: black;
+    }
+    
+    .change_button {
+        background: aqua;
+        color: red;
+    }
+    
+    .change_button1 {
+        background: red;
+        color: blue;
+    }
+</style>
+
+<body>
+    <button class="button_booth"> Button booth </button>
+</body>
+<script>
+    $(document).ready(function() {
+        // $('.button_booth').mouseenter(function() {
+        //     $('.button_booth').css({
+        //         'backgroundColor': 'blue',
+        //         'color': 'white'
+        //     })
+        // })
+        // $('.button_booth').mouseleave(function() {
+        //     $('.button_booth').css({
+        //         'backgroundColor': 'dodgerblue',
+        //         'color': 'black'
+        //     })
+        // })
+        $('.button_booth').click(function() {
+            $('.button_booth').addClass('change_button');
+            $('.button_booth').removeClass('change_button1');
+        });
+        $('.button_booth').dblclick(function() {
+            $('.button_booth').addClass('change_button1');
+            //toggleClass
+        })
+    });
+</script>
+
+</html>

@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <script src="jquery.js"></script>
+</head>
+<style>
+    .box_wrap {
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        margin: 10px;
+        border: 3px solid black;
+        background: gray;
+    }
+</style>
+
+<body>
+    <div>Belajar Javascript</div>
+    <div class="box_wrap">
+        <center> Box Wrap</center>
+    </div>
+    <div><button id="show">Show</button> <button id="hide">Hide</button><button id="toggle">Toggle</button><button id="stop">Stop</button></div>
+    <div id="out"></div>
+</body>
+<script>
+    //metode stop animasi , callback => memanggil dalam bentung function, chaining => menggabungkan metode metode
+
+    $(document).ready(function() {
+
+
+        $('#show').click(function() {
+            $('.box_wrap').slideDown(2000, function() {
+                alert('show');
+            });
+        });
+
+        $('#hide').click(function() {
+            $('.box_wrap').slideUp(2000);
+        });
+
+        $('#toggle').click(function() {
+            $('.box_wrap').slideToggle(3000);
+        });
+
+        $('#stop').click(function() {
+            $('.box_wrap').stop().fadeOut(2000, function() {
+                alert('menghilang');
+            });
+        });
+
+    });
+</script>
+
+</html>

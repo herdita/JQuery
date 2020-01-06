@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <script src="jquery.js"></script>
+</head>
+<style>
+    .box_wrap {
+        width: 200px;
+        height: 100px;
+        padding: 10px;
+        margin: 10px;
+        border: 3px solid black;
+    }
+</style>
+
+<body>
+    <div>Belajar Javascript</div>
+    <div class="box_wrap">
+        <ul>
+            <li>javascript</li>
+            <li>j-query</li>
+            <li>ajax</li>
+            <li>php</li>
+        </ul>
+    </div>
+    <div id="out"></div>
+</body>
+<script>
+    //metode dimensi
+    //.width() => menghitung lebar konten
+    //.innerWidth()  => konten + padding
+    //.outerWidth()  => konten + padding + border 
+    //.outerWidht(true) => konten + padding + border + margin
+    $(document).ready(function() {
+        // var nilai = $('.box_wrap').outerWidth(true);
+        // $('#out').text(nilai);
+        $('.box_wrap').width(400).height(300);
+    });
+</script>
+
+</html>

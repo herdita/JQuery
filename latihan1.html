@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <script src="jquery.js"></script>
+</head>
+<style>
+
+</style>
+
+<body>
+    <p>Riset di Codelabs</p>
+    <h1>Belajar Jquery</h1>
+    <div id="div1"> herdita permana </div>
+    <div class="boxes">menu pertama</div>
+    <div class="boxes">menu kedua</div>
+    <div class="boxes">menu Ketiga</div>
+    <div class="boxes">menu Keempat</div>
+</body>
+<script>
+    $(document).ready(function() {
+        $('p').css('color', 'blue');
+        $('h1').css('color', 'red');
+        $('#div1').css('background', 'yellow');
+        $('.boxes').css('color', 'aqua');
+
+        $('.boxes:first').css('font-size', '30px');
+        $('.boxes:last').css('background', 'green');
+        $('.boxes:eq(1)').css('font-size', '40px');
+    });
+</script>
+
+</html>

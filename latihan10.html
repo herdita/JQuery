@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <script src="jquery.js"></script>
+</head>
+<style>
+    .box_wrap {
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        margin: 10px;
+        border: 3px solid black;
+        background: gray;
+    }
+    
+    .div {
+        font-size: 20px;
+        color: dodgerblue;
+    }
+</style>
+
+<body>
+    <div>Belajar Javascript</div>
+    <div class="box_wrap">
+        <center> Box Wrap</center>
+    </div>
+    <ul>
+        <li>Css</li>
+        <li>Javascript</li>
+        <li>Ruby</li>
+        <li id="phyton">Phyton</li>
+        <li>Html</li>
+    </ul>
+</body>
+<script>
+    //  metode query lebih yang spesifik
+
+    // first(); 
+    // last(); 
+    // eq(); 
+    // filter(); -> id yang dicari
+    // not() -> selain id itu
+
+    $(document).ready(function() {
+        $('li').first().css({
+            'color': 'red',
+            'background': 'yellow'
+        });
+
+        $('li').last().css('color', 'blue');
+
+        $('li').eq(2).css('background', 'aqua');
+
+        $('li').filter('#phyton').addClass('div');
+
+        $('li').not('#phyton').remove();
+    });
+</script>
+
+</html>

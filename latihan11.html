@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <script src="jquery.js"></script>
+</head>
+<style>
+    .box_wrap {
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        margin: 10px;
+        border: 3px solid black;
+        background: gray;
+    }
+    
+    .div {
+        font-size: 20px;
+        color: dodgerblue;
+    }
+</style>
+
+<body>
+    <div>Belajar Javascript</div>
+    <div class="box_wrap">
+        <center> Box Wrap</center>
+    </div>
+    <ul>
+        <li>Css</li>
+        <li>Javascript</li>
+        <li>Ruby</li>
+        <li id="phyton">Phyton</li>
+        <li>Html</li>
+        <li>framework</li>
+        <li>library</li>
+        <li>php</li>
+    </ul>
+</body>
+<script>
+    //  metode query lebih yang spesifik
+
+    // siblings();
+    // next();
+    // nextAll();
+    // nextUntil('sampai');
+    // prev();
+
+    $(document).ready(function() {
+        // $('#phyton').siblings().css('background', 'yellow');
+        // $('li').eq(5).next().css('background', 'red');
+        // $('li').eq(4).nextAll().css('color', 'blue');
+        // $('li').eq(2).nextUntil($('li').eq(7)).css('fontSize', '30px');
+        $('li').eq(7).prevUntil($('li').eq(1)).css('fontSize', '30px');
+
+
+    });
+</script>
+
+</html>

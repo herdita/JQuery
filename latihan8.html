@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <script src="jquery.js"></script>
+</head>
+<style>
+    .box_wrap {
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        margin: 10px;
+        border: 3px solid black;
+        background: gray;
+    }
+</style>
+
+<body>
+    <div>Belajar Javascript</div>
+    <div class="box_wrap">
+        <center> Box Wrap</center>
+    </div>
+    <div><button id="show">Show</button> <button id="hide">Hide</button><button id="toggle">Toggle</button></div>
+    <div id="out"></div>
+</body>
+<script>
+    //metode show hide toggle
+    // show(), hide(), toggle()
+    // fadeIn(), fadeOut(), fadeToggle(), fadeTo(durasi,opacity) // fadeIn(durasi);
+    // slideDown(), slideUp(), slideToggle();
+
+    $(document).ready(function() {
+
+        // $('#show').click(function() {
+        //     $('.box_wrap').show();
+        // });
+
+        // $('#hide').click(function() {
+        //     $('.box_wrap').hide();
+        // });
+
+        // $('#toggle').click(function() {
+        //     $('.box_wrap').toggle();
+        // });
+
+        // $('#show').click(function() {
+        //     $('.box_wrap').fadeIn(2000);
+        // });
+
+        // $('#hide').click(function() {
+        //     $('.box_wrap').fadeOut(2000);
+        // });
+
+        // $('#toggle').click(function() {
+        //     $('.box_wrap').fadeToggle();
+        // });
+
+        // $('#toggle').click(function() {
+        //     $('.box_wrap').fadeTo(2000, 0.5);
+        // });
+
+        $('#show').click(function() {
+            $('.box_wrap').slideDown(2000);
+        });
+
+        $('#hide').click(function() {
+            $('.box_wrap').slideUp(2000);
+        });
+
+
+        $('#toggle').click(function() {
+            $('.box_wrap').slideToggle(3000);
+        });
+
+    });
+</script>
+
+</html>

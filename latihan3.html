@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <script src="jquery.js"></script>
+</head>
+
+<body>
+    <h1>Belajar J-query</h1>
+    <form id="form1">
+        <table>
+            <tr>
+                <td>Nama</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Alamat</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Kelas</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>universitas</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><input type="submit"></td>
+            </tr>
+        </table>
+    </form>
+    <form>
+        <table>
+            <tr>
+                <td>
+                    <div></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div></div>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+<script>
+    // $(document).ready(function() {
+    //     $('#form1').submit(function() {
+    //         for (var i = 0; i <= 3; i++) {
+    //             $('div:eq(' + i + ')').text($('input:eq(' + i + ')').val());
+    //         };
+    //         event.preventDefault()
+    //     });
+    // });
+
+    $(document).ready(function() {
+
+        $('form:eq(0)').submit(function() {
+            for (var i = 0; i <= 3; i++) {
+                $('div:eq(' + i + ')').text($('input:eq(' + i + ')').val());
+
+            };
+            event.preventDefault();
+
+        });
+
+    });
+</script>
+
+</html>

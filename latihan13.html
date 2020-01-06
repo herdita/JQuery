@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <script src="jquery.js"></script>
+</head>
+<style>
+    .box_wrap {
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        margin: 10px;
+        border: 3px solid black;
+        background: gray;
+    }
+    
+    .div {
+        font-size: 20px;
+        color: dodgerblue;
+    }
+</style>
+
+<body>
+    <div>Belajar Javascript</div>
+    <div class="box_wrap">
+        <center> Box Wrap</center>
+    </div>
+    <ul>
+        <li>Css</li>
+        <li>Javascript</li>
+        <li>Ruby</li>
+        <li>Phyton</li>
+        <div id="phyton">
+            <div> div parent div parent ul
+                <div> div parent div parent div parent ul</div>
+            </div>
+            <span> span parent div parent ul</span>
+        </div>
+        <li>Html</li>
+        <li>framework</li>
+        <li>library</li>
+        <li>php</li>
+    </ul>
+</body>
+<script>
+    //  metode query lebih yang spesifik
+
+    // children(), find(); parent(), parents(), parentUntil(), 
+
+    $(document).ready(function() {
+        $('#phyton').find('div').css('background', 'blue');
+    });
+</script>
+
+</html>

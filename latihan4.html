@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <script src="jquery.js">
+    </script>
+</head>
+
+<body>
+    <!-- <div id="boxes_wrap"> -->
+
+    <!-- <div id="result1">selamat pagi &nbsp &nbsp &nbsp &nbsp| <button id="submit1">remove</button></div>
+    <div id="result2">selamat sore &nbsp &nbsp &nbsp &nbsp | <button id="submit2">remve</button></div>
+    <div id="result3">selamat malam &nbsp &nbsp | <button id="submit3">remove</button></div>
+    <div id="result4">selamat tidur &nbsp &nbsp &nbsp| <button id="submit4">remove</button></div>
+    </div> -->
+
+
+    <div>text = &nbsp <input type="text" id="input_text"> <button id="sub_input">submit</button></div>
+    <br>
+
+    <div id="tampil"> </div>
+</body>
+
+<script>
+    // menambahkan dan menghapus 
+    // append, prepend, after, before,
+    $(document).ready(function() {
+        // $('#boxes_wrap').append('<h2>hallo</h2>');
+        // $('#boxes_wrap').prepend('hai');
+        // $('#boxes_wrap').after('gimana kabarnya');
+        // $('#boxes_wrap').before('saya baik baik saja');
+        // var i = 1;
+
+        //remove dan empty
+
+        // for (; i <= 4; i++) {
+        //     $('#result' + i).click(function() {
+        //         $(this).remove();
+        //     });
+        // };
+        // var i = 1;
+
+        // function add(out) {
+        //     $('#tampil').append('<div id="div' + i + '">' + out + '&nbsp <input type="submit"><div> ');
+        //     i++;
+        // };
+
+        // $('#sub_input').click(function() {
+        //     var out = $('#input_text').val();
+        //     add(out);
+
+        //     event.preventDefault();
+        // });
+
+        // $('#div1').click(function() {
+        //     $(this).empty();
+        // });
+        var i = 0;
+        var z = 0;
+
+        $('#sub_input').click(function() {
+            var tulisan = $('#input_text').val();
+            $('#tampil').before('<div id="div' + 1 + '">' + tulisan + '&nbsp<button id="remove' + 1 + '">Remove</button></div>');
+        });
+
+
+    });
+</script>
+
+</html>

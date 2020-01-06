@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <script src="jquery.js"></script>
+</head>
+
+<body>
+    <h1>Belajar jquery</h1>
+    <div id="box1">selection</div>
+    <div class="boxes">event</div>
+    <div class="boxes">click</div>
+    <div class="boxes">double click</div>
+    <form>
+        <input type="text" id="input">
+        <input type="submit">
+    </form>
+</body>
+<script>
+    $(document).ready(function() {
+        $('h1').css('color', 'yellow');
+        $('#box1').css('background', 'red');
+        $('.boxes').css('color', 'blue');
+
+        $('h1').mouseenter(function() {
+            $('h1').css('color', 'blue');
+        });
+
+        $('h1').mouseleave(function() {
+            $('h1').css('color', 'green');
+        });
+
+        $('.boxes').mouseenter(function() {
+            $(this).css('background', 'yellow');
+        });
+
+        $('.boxes').mouseleave(function() {
+            $(this).css('background', 'white');
+        });
+
+        $('.boxes:eq(1)').click(function() {
+            $('.boxes:eq(1)').css('background', 'red');
+        });
+
+        $('form').submit(function() {
+            $('h1').text($('#input').val());
+
+            event.preventDefault();
+        });
+
+    });
+</script>
+
+</html>
